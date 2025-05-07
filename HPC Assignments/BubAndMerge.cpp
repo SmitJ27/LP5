@@ -29,6 +29,47 @@ Time: 0.001456 sec
 Parallel Merge Sort: 1 2 3 5 7 8 
 Time: 0.000654 sec
 
+🔹 1. Bubble Sort
+Best Case: O(n) (when array is already sorted, with optimized version)
+
+Average Case: O(n²)
+
+Worst Case: O(n²)
+
+Why? It compares adjacent elements and swaps them if out of order, 
+taking n passes with up to n comparisons each.
+
+🔹 2. Merge Sort
+Best Case: O(n log n)
+
+Average Case: O(n log n)
+
+Worst Case: O(n log n)
+
+Why? Divide-and-conquer approach splits the array into halves and merges them back, 
+which takes log n levels and O(n) work per level.
+
+🔹 3. Parallel Bubble Sort
+Best Case: O(n) (if using optimized flag and array is already sorted)
+
+Average Case: O(n² / p) (where p = number of threads/processors)
+
+Worst Case: O(n² / p)
+
+Why? Swaps can be done in odd-even phases in parallel, 
+but overall structure is still quadratic in complexity. Speedup depends on thread coordination.
+
+🔹 4. Parallel Merge Sort
+Best Case: O(n log n / p) or even O(log² n) in ideal case
+
+Average Case: O(n log n / p)
+
+Worst Case: O(n log n / p)
+
+Why? Each divide step can be done in parallel; merging steps can also be parallelized up to a point. 
+Near the root of the recursion tree, parallelism reduces.
+
+
 */
 
 #include <iostream>
