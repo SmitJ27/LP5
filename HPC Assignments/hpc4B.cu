@@ -14,6 +14,39 @@ Result of matrix multiplication:
 19 22
 43 50
 
+In the given CUDA code, the matrix multiplication is performed using the kernel matrixMul, where each thread computes one element of the resulting matrix C.
+Each element of C is calculated by performing a dot product between a row of matrix A and a column of matrix B, 
+which involves n multiplications and additions (since both A and B are of size n x n).
+
+Thus, for each element of the result matrix C, the work done is O(n).
+
+Total Work:
+There are n * n elements in the result matrix C.
+
+For each element, we perform O(n) work.
+Therefore, the total time complexity for the matrix multiplication is:
+
+O(n²) × O(n) = O(n³).
+
+SPACE COMPLEXITY - 
+
+Host Memory (CPU):
+You have three vectors h_A, h_B, and h_C on the host.
+Each of these vectors has a size of n * n (since they store matrices of size n x n).
+Therefore, the space complexity for the host arrays is O(n²).
+
+Device Memory (GPU):
+You allocate memory on the device for three matrices: d_A, d_B, and d_C.
+Again, each matrix has size n * n.
+Therefore, the space complexity for the device arrays is O(n²).
+
+Total Space Complexity:
+Host memory: O(n²) for h_A, h_B, and h_C.
+Device memory: O(n²) for d_A, d_B, and d_C.
+Thus, the total space complexity for the entire code is:
+O(n²).
+
+
 */
 
 #include <iostream>
