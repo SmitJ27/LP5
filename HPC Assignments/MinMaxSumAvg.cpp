@@ -27,6 +27,11 @@ Maximum: 8.3
 Sum: 21.0
 Average: 4.200000
 
+The time complexity of the code is O(N)
+The loop that calculates the min, max, and sum runs once over the entire array, performing constant-time operations (+, <, >) per element.
+
+So, the complexity is directly proportional to the number of elements n.
+
 */
 
 #include <iostream>
