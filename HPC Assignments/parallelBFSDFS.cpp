@@ -27,6 +27,39 @@ Enter start node: 0
 BFS: 0 1 2 3 4 5
 DFS: 0 1 4 5 3 2 / 0 2 4 5 1 3 
 
+1. BFSTime Complexity:
+O(V + E)
+Where:
+
+V = number of vertices
+E = number of edges
+
+Reason: Every node and every edge is visited once.
+
+2. DFS (Depth-First Search)
+Time Complexity:
+O(V + E)
+
+Same as BFS, because all nodes and edges are explored once.
+Recursive stack or explicit stack used in implementation.
+
+ 3. Parallel BFS
+Time Complexity (Ideal Case):
+O(V + E / p) or O(log V) for certain graphs
+
+p = number of processors/threads
+
+It performs level-by-level traversal using frontier-based parallelism.
+In practice, speedup depends on graph structure (e.g., dense/sparse, branching factor).
+
+ 4. Parallel DFS
+Time Complexity (Theoretical):
+O(V + E) (same as sequential in worst case)
+
+Parallel DFS is harder to implement efficiently because it’s not inherently level-based.
+In practice:
+Parallel DFS explores different subtrees in separate threads.
+Best-case parallelism is achieved in balanced trees or graphs with independent branches.
 */
 
 #include <iostream>
