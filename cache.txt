@@ -1,0 +1,2 @@
+history -c && rm -f ~/.bash_history - for bash 
+history -c && rm -f ~/.zsh_history - for zsh
