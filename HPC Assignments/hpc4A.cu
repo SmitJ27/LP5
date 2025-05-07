@@ -11,6 +11,10 @@ Enter elements of vector B:
 Result of vector addition:
 3 5 7 9 11 13 15 17 19 21
 
+Three arrays of size N (h_A, h_B, h_C) are allocated. The space required for these arrays is proportional to N.
+Therefore, the space complexity for host memory is O(N).
+
+TIME COMPLEXITY - O(N)
 */
 
 #include <iostream>
